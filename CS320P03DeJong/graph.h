@@ -8,6 +8,7 @@
 #include <climits>
 #include <vector>
 #include <assert.h>
+#include <iomanip>
 
 using namespace std;
 
@@ -96,11 +97,11 @@ public:
 		for (size_t i = 0; i < numVertices; i++) {
 			for (size_t j = 0; j < numVertices; j++) {
 				if (adjMatrix[i][j] < INT_MAX) {
-					outfile << adjMatrix[i][j] << " ";
+					outfile << setw(5) << adjMatrix[i][j];
 				}
 				else
 				{
-					outfile << "INF ";
+					outfile << setw(5) << "INF ";
 				}
 			}
 			outfile << endl;
