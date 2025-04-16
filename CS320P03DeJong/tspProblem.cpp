@@ -51,9 +51,9 @@ void tspProblem::solve(){
 
 	unsigned int cost = computeMinTourCost(0, bits);
 	if (cost != INT_MAX) {
-		cout << "Optimal Tour Cost = [ " << cost << ", ";
+		cout << "Optimal Tour Cost = [" << cost << ", ";
 		printPath();
-		cout << " ]";
+		cout << "]";
 	}
 	else {
 		cout << "No Hamiltonian Cycle";
